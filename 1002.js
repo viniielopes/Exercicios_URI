@@ -5,12 +5,9 @@ var leitor = readline.createInterface({
   output: process.stdout
 });
 
-var raio = 1.25;
-var area = 1.25;
-
-leitor.question("", resposta => {
-  raio = parseFloat(resposta).toFixed(2);
-  area = parseFloat(raio * raio * 3.14159);
-  console.log(`A=${parseFloat(area).toFixed(4)}`);
+leitor.question("", (resposta) => {
+  var raio = parseFloat(resposta);
+  var area = parseFloat(raio * raio * 3.14159).toFixed(4);
+  console.log("A=" + area);
   leitor.close();
 });
